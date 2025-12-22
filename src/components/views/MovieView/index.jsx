@@ -92,7 +92,6 @@ const MovieView = () => {
 
       <Wrapper
         bgImg={<ImgComponent className="w-full top-[-240px] left-40px" index="5"></ImgComponent>}
-        className="movie-header"
         headerTitle="2019-2025年影院数及银幕数"
         bannerOptions={{
           src: imgPath("title6.png"),
@@ -106,7 +105,6 @@ const MovieView = () => {
 
       <Wrapper
         bgImg={<ImgComponent className="w-full top-[-240px] left-40px" index="5"></ImgComponent>}
-        className="movie-header"
         headerTitle="2019-2025年观影人次及增幅"
         bannerOptions={{
           src: imgPath("title7.png"),
@@ -119,7 +117,6 @@ const MovieView = () => {
       </Wrapper>
       <Wrapper
         bgImg={<ImgComponent className="w-full top-[-240px] left-40px" index="5"></ImgComponent>}
-        className="movie-header"
         headerTitle="2019-2025年电影相关话题讨论用户年龄分布"
         bannerOptions={{
           src: imgPath("title8.png"),
@@ -132,7 +129,6 @@ const MovieView = () => {
       </Wrapper>
       <Wrapper
         bgImg={<ImgComponent className="w-full top-[-40px] left-0" index="3"></ImgComponent>}
-        className="movie-header"
         headerTitle="2019-2025年分线城市贡献率"
         bannerOptions={{
           src: imgPath("title9.png"),
@@ -200,8 +196,8 @@ const MovieView = () => {
       <Wrapper
         remark="注：电影角色喜爱度，筛选自2025年头部影片中知名度较高角色，根据角色的口碑指数、声量、互动量进行加权汇总获得；其中口碑指数为核心计算指标。"
         bgImg={<ImgComponent className="w-full top-[-40px] left-0" index="3"></ImgComponent>}
-        className="movie-header"
         showHeader={false}
+        className="movie-header"
         bannerOptions={{
           src: imgPath("title14.png"),
           w: 2,
@@ -214,8 +210,8 @@ const MovieView = () => {
       <Wrapper
         remark="注：新生代演员统计出生年份为1997年之后的电影演员，根据选定时间范围内演员主要参演作品的评分、个人美誉度和票房号召力综合计算得出，其中作品评分为核心计算指标。"
         bgImg={<ImgComponent className="w-full top-[-40px] left-0" index="3"></ImgComponent>}
-        className="movie-header"
         showHeader={false}
+        className="movie-header"
         bannerOptions={{
           src: imgPath("title15.png"),
           w: 2.2,
@@ -227,8 +223,8 @@ const MovieView = () => {
       </Wrapper>
       <Wrapper
         bgImg={<ImgComponent className="w-full top-[-40px] left-0" index="3"></ImgComponent>}
-        className="movie-header"
         showHeader={false}
+        className="movie-header"
         bannerOptions={{
           src: imgPath("title16.png"),
           w: 2.4,

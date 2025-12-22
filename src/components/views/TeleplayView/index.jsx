@@ -146,7 +146,7 @@ const TeleplayView = () => {
       <Wrapper
         headerContent={<ContentListHeader data={dataList[8]}></ContentListHeader>}
         bgImg={<ImgComponent className="w-full top-[-200px] right-[-100px]" index="5"></ImgComponent>}
-        bannerOptions={{ src: imgPath("title13.png"), w: 2.6, h: 0.54, align: 'center' }}
+        bannerOptions={{ src: imgPath("title13.png"), w: 3, h: 0.6, align: 'center' }}
       >
 
         <ContentList isShowHeader={false} data={dataList[8]}></ContentList>
@@ -156,7 +156,7 @@ const TeleplayView = () => {
         remark="注：综合热度指数由艺人参演剧集的热度口碑、艺人专业热度、艺人关注热度、艺人美誉度加权所得。此榜单统计演员范围为2025年所有在更剧集的前两番演员。"
         headerContent={<ContentListHeader data={dataList[9]}></ContentListHeader>}
         bgImg={<ImgComponent className="w-full top-[-200px] right-[-100px]" index="5"></ImgComponent>}
-        bannerOptions={{ src: imgPath("title14.png"), w: 2.6, h: 0.54, align: 'center' }}
+        bannerOptions={{ src: imgPath("title14.png"), w: 3, h: 0.6, align: 'center' }}
       >
 
         <ContentList isShowHeader={false} data={dataList[9]}></ContentList>
@@ -164,7 +164,7 @@ const TeleplayView = () => {
       <Wrapper
         headerContent={<ContentListHeader data={dataList[10]}></ContentListHeader>}
         bgImg={<ImgComponent className="w-full top-[-200px] right-[-100px]" index="5"></ImgComponent>}
-        bannerOptions={{ src: imgPath("title15.png"), w: 2.4, h: 0.54, align: 'center' }}
+        bannerOptions={{ src: imgPath("title15.png"), w: 2.4, h: 0.6, align: 'center' }}
       >
         <ContentList isShowHeader={false} data={dataList[10]}></ContentList>
       </Wrapper>
@@ -172,7 +172,7 @@ const TeleplayView = () => {
         remark="注：由艺人参演作品口碑指数、艺人及角色正面讨论度、艺人美誉度等数据加权所得。此榜单统计演员范围为2025年所有在更剧集的前三番演员。"
         headerContent={<ContentListHeader data={dataList[11]}></ContentListHeader>}
         bgImg={<ImgComponent className="w-full top-[-200px] right-[-100px]" index="5"></ImgComponent>}
-        bannerOptions={{ src: imgPath("title16.png"), w: 2.4, h: 0.54, align: 'center' }}
+        bannerOptions={{ src: imgPath("title16.png"), w: 2.4, h: 0.6, align: 'center' }}
       >
         <ContentList isShowHeader={false} data={dataList[11]}></ContentList>
       </Wrapper>
@@ -180,7 +180,7 @@ const TeleplayView = () => {
         remark="注：数据来源自腾讯娱乐影响力排行1-11月总体表现，根据影视综作品在腾讯新闻的创作影响力、消费影响力、互动影响力、搜索影响力以及播映表现，综合计算得出。"
         headerContent={<ContentListHeader data={dataList[12]}></ContentListHeader>}
         bgImg={<ImgComponent className="w-full top-[-200px] right-[-100px]" index="5"></ImgComponent>}
-        bannerOptions={{ src: imgPath("title17.png"), w: 2.4, h: 0.54, align: 'center' }}
+        bannerOptions={{ src: imgPath("title17.png"), w: 2.4, h: 0.6, align: 'center' }}
       >
         <ContentList isShowHeader={false} data={dataList[12]}></ContentList>
       </Wrapper>
