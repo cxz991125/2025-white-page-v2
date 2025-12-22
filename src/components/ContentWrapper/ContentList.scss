@@ -1,0 +1,43 @@
+.content-list {
+    .list-header {
+        >div {
+            background: #dcdcdc !important;
+            color: #595959 !important;
+        }
+    }
+    .list-wrapper {
+        .content-list_item {
+            display: flex;
+            background: white;
+            // height: 35px;
+            >div {
+                text-align: center;
+                // padding: 10px 0;
+                height: 40px;
+                color: #595959;
+                font-weight: bold;
+                font-size: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                // white-space: nowrap;
+                // text-overflow: ellipsis;
+                // overflow: hidden;
+            }
+            &:nth-child(even) {
+                background: #f7f8f8;
+            }
+        }
+    }
+    &.ranking {
+        .list-wrapper .content-list_item {
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                &>div:first-child {
+                    color: #FF0000;
+                }
+            }
+        }
+    }
+}

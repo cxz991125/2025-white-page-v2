@@ -1,0 +1,17 @@
+.button-component {
+    margin: 50px 0 0px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+    .button-inner {
+        // background: #4F60C7;
+        // border-radius: 18px 18px 18px 18px;
+        // opacity: 1;
+        // border: 0.5px solid #FFFFFF;
+        // color: white;
+        // padding: 10px 30px;
+        width: 180px;
+        height: 54px;
+    }
+}

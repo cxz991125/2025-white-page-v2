@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ECharts多维柱状图示例</title>
+</head>
+<body>
+   <div id="chart_container" style="width: 600px; height: 400px;"></div>
+   <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+   <script>
+       // 准备数据
+       let data = [
+           {product: 'A', area: 'Shanghai', sales: 800},
+           {product: 'B', area: 'Shanghai', sales: 1200},
+           {product: 'A', area: 'Beijing', sales: 1000},
+           {product: 'B', area: 'Beijing', sales: 1400},
+       ];
+       
+       // 配置ECharts参数
+       let option = {
+           legend: {},
+           tooltip: {},
+           dataset: {
+               dimensions: ['area', 'product', 'sales'],
+               source: data
+           },
+           xAxis: {
+               type: 'category',
+               axisLabel: {
+                   interval: 0,
+                   rotate: 45
+               }
+           },
+           yAxis: {},
+           series: [
+               {type: 'bar', seriesLayoutBy: 'row'},
+               {type: 'bar', seriesLayoutBy: 'row'}
+           ]
+       };
+       
+       // 渲染ECharts图表
+       let chart = echarts.init(document.getElementById('chart_container'));
+       chart.setOption(option);
+   </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="" />
+
+  <title>2024腾讯娱乐白皮书-定力之年</title>
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+  <script>
+
+    (function () {
+      var cacheWidth = 0;
+      var timer;
+      var docEl = document.documentElement;
+      var recalc = function () {
+        var clientWidth = docEl.clientWidth;
+        if (!clientWidth) return;
+        clientWidth = Math.max(Math.min(clientWidth, 450), 320);
+        if (cacheWidth !== clientWidth) {
+          clearInterval(timer);
+          cacheWidth = clientWidth;
+          docEl.style.fontSize = clientWidth / 375 * 100 + 'px'; // 部分Android环境存在rem计算问题，扩大100倍解决
+        }
+      }
+      recalc();
+      setTimeout(recalc, 300);
+      if (!window.addEventListener) return;
+      var resizeWithTimer = function () { timer = setInterval(recalc, 10); }
+      if ('onorientationchange' in window) window.addEventListener('orientationchange', resizeWithTimer);
+      if ('onresize' in window) window.addEventListener('resize', resizeWithTimer);
+    })();
+
+  </script>
+  <script>
+    if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+      shareImg();
+    } else {
+      if (document.addEventListener) {
+        document.addEventListener("WeixinJSBridgeReady", shareImg, false);
+      } else if (document.attachEvent) {
+        document.attachEvent("WeixinJSBridgeReady", shareImg);
+        document.attachEvent("onWeixinJSBridgeReady", shareImg);
+      }
+    }
+    // 分享标题
+    var sTitle = "2024腾讯娱乐白皮书-定力之年";
+    // 分享描述
+    var sDesc = "定力之年：不乱方寸，拥抱变化，坚守内容初心，坚持内容价值";
+    // 分享链接
+    var sLink = "https://h5.news.qq.com/sv1/whitepaper/2024/test.html";
+    // 分享图片
+    var sImage = "https://mat1.gtimg.com/qqcdn/whitepaper_test/2024/images/feng1.png";
+
+    var shareConfig = {
+      img_url: sImage,
+      img_width: '65',
+      img_height: '65',
+      link: sLink,
+      desc: sDesc,
+      title: sTitle,
+    };
+
+    function shareImg() {
+      window.WeixinJSBridge.on('menu:share:timeline', () => {
+        window.WeixinJSBridge.invoke('shareTimeline', shareConfig, () => { });
+      });
+      window.WeixinJSBridge.on('menu:share:appmessage', () => {
+        window.WeixinJSBridge.invoke('sendAppMessage', shareConfig, () => { });
+      });
+    }
+  </script>
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>

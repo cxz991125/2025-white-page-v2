@@ -1,0 +1,122 @@
+@mixin pageBg($index) {
+    // background-image: url('https://mat1.gtimg.com/qqcdn/20whitepage/dist/images/banner#{$index}.png');
+    background-image: url('#{$configUrl}images/#{$index}/banner2.png');
+    background: none;
+    // padding-top: 600px;
+    // background-size: 100% 700px;
+    // background-position: left -50px;
+    // background-repeat: no-repeat;
+}
+
+@font-face {
+    font-family: 'SourceHanSansCN-Light';
+    font-display: swap;
+    src: url('#{$configUrl}font/SourceHanSansCN-Bold.otf') format("truetype");
+}
+
+@font-face {
+    font-family: 'SourceHanSansCN-Bold';
+    font-display: swap;
+    src: url('#{$configUrl}font/SourceHanSansCN-Heavy.otf') format("truetype");
+}
+
+@font-face {
+    font-family: 'SourceHanSansCN-Heavy';
+    font-display: swap;
+    src: url('#{$configUrl}SourceHanSansCN-Light.otf') format("truetype");
+}
+
+@keyframes myMove {
+    0% {
+        bottom: 55px
+    }
+
+    50% {
+        bottom: 60px
+    }
+
+    to {
+        bottom: 55px;
+    }
+}
+
+@keyframes opa {
+    0% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+html, body {
+    font-size: 14px;
+    background-color: #d9bb95;
+    font-family: 'SourceHanSansCN-Light' !important;
+}
+
+.source-han-sans-cn-bold {
+    font-family: 'SourceHanSansCN-Bold';
+}
+
+.music-page {
+    @include pageBg('music');
+}
+
+.movie-page {
+    @include pageBg('movie');
+}
+
+.star-page {
+    @include pageBg('star');
+}
+
+.variety-page {
+    @include pageBg('variety');
+}
+
+.teleplay-page {
+    @include pageBg('teleplay');
+    background-color: #d9bb95;
+}
+
+@mixin header-bg($color) {
+    .content {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .list-header {
+        background: $color;
+        >div {
+            height: 40px;
+            background: none !important;
+            color: white !important;
+        }
+    }
+}
+
+.banner-img {
+    // min-height: 100vh;
+}
+
+.teleplay-header {
+    @include header-bg(linear-gradient( 90deg, rgb(206,198,165) 0%, rgb(206,179,105) 100%))
+}
+
+.movie-header {
+    @include header-bg(linear-gradient( 90deg, rgb(158,143,166) 0%, rgb(148,127,160) 40%, rgb(138,111,153) 100%))
+}
+
+.music-header {
+    @include header-bg(linear-gradient( 90deg, rgb(135,200,220) 0%, rgb(105,191,217) 40%, rgb(75,181,213) 100%))
+}
