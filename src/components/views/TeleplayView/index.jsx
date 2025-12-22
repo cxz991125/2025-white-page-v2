@@ -99,7 +99,6 @@ const TeleplayView = () => {
       </Wrapper>
       <Wrapper
         bgImg={<ImgComponent className="w-full top-[-40px] left-0" index="3"></ImgComponent>}
-        className="teleplay-header"
         headerTitle="近五年微短剧市场规模变化"
         remark="注：数据来源《2025年微短剧阶段性发展报告》"
         bannerOptions={{ src: imgPath("title9.png"), w: 2.8, h: 0.6, align: 'center' }}
@@ -108,7 +107,6 @@ const TeleplayView = () => {
       </Wrapper>
       <Wrapper
         bgImg={<ImgComponent className="w-full top-[-40px] left-0" index="3"></ImgComponent>}
-        className="teleplay-header"
         headerTitle="2025年免费短剧市场规模变化"
         remark="注：数据来源DataEye。"
         bannerOptions={{ src: imgPath("title10.png"), w: 2.4, h: 0.24, align: 'center' }}
