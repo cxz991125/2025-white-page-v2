@@ -252,7 +252,7 @@ export const dataList = [
         render: (item, index) => {
           return (<div className="flex items-center">
             <img className="w-30px h-30px mr-10px" src={getImg(imgPath(`tou${index}.png`))}></img>
-            <span>{item[0]}</span>
+            <span className="block w-30px">{item[0]}</span>
           </div>)
         }
       },
@@ -261,7 +261,7 @@ export const dataList = [
         width: 70,
       },
       {
-        title: '红果关联短剧数量',
+        title: '关联短剧数量',
         width: 60
       }
     ],
@@ -270,7 +270,7 @@ export const dataList = [
       ['李柯以', '5', '37'],
       ['郭宇欣', '5', '36'],
       ['王培延', '4', '29'],
-      ['曾辉', '4', '27'],
+      ['曾辉 ', '4', '27'],
       ['刘萧旭', '4', '26'],
     ],
   },
@@ -614,9 +614,9 @@ export const chartOptions = [
         }
       }
       return [
-        getBarSeries("#efbfac", [27, 33, 33], getOpt("一周以内", [[{ xAxis: '2023年', yAxis: 27 }, { xAxis: '2024年', yAxis: 33 }], [{ xAxis: '2024年', yAxis: 33 }, { xAxis: '2025年', yAxis: 33 }]])),
-        getBarSeries("#f9d09a", [40, 40, 43], getOpt("两周以内", [[{ xAxis: '2023年', yAxis: 66 }, { xAxis: '2024年', yAxis: 68 }], [{ xAxis: '2024年', yAxis: 68 }, { xAxis: '2025年', yAxis: 72 }]])),
-        getBarSeries("#c6c4b9", [33, 28, 24], getOpt("两周以上", [[{ xAxis: '2023年', yAxis: 90 }, { xAxis: '2024年', yAxis: 90 }], [{ xAxis: '2024年', yAxis: 90 }, { xAxis: '2025年', yAxis: 90 }]], [20, 20, 0, 0])),
+        getBarSeries("#efbfac", [27, 33, 33], getOpt("两周以内", [[{ xAxis: '2023年', yAxis: 27 }, { xAxis: '2024年', yAxis: 33 }], [{ xAxis: '2024年', yAxis: 33 }, { xAxis: '2025年', yAxis: 33 }]])),
+        getBarSeries("#f9d09a", [40, 40, 43], getOpt("两周以上 - 三周以内", [[{ xAxis: '2023年', yAxis: 66 }, { xAxis: '2024年', yAxis: 68 }], [{ xAxis: '2024年', yAxis: 68 }, { xAxis: '2025年', yAxis: 72 }]])),
+        getBarSeries("#c6c4b9", [33, 28, 24], getOpt("三周以上", [[{ xAxis: '2023年', yAxis: 90 }, { xAxis: '2024年', yAxis: 90 }], [{ xAxis: '2024年', yAxis: 90 }, { xAxis: '2025年', yAxis: 90 }]], [20, 20, 0, 0])),
       ]
     }()
   },
@@ -1044,7 +1044,7 @@ export const chartOptions = [
         },
         data: [
           { value: 65, name: '其他厂牌,37部' },
-          { value: 35, name: '听话岛,20部' }
+          { value: 35, name: '花岛,20部' }
         ],
         label: {
           formatter: '{b}\n{d}%',

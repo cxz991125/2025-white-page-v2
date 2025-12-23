@@ -65,7 +65,7 @@ const ImgComponent = (props) => {
           <Wrapper
             remark="注：歌手综合价值基于歌手线下演出的热度、商业价值加权计算得出。"
             bgImg={<ImgComponent className="w-full top-[-180px]" index="6"></ImgComponent>}
-            headerTitle="2025年举办线下演出的歌手价值榜TOP10"
+            headerTitle="2025年举办线下演出的歌手价值TOP10"
             bannerOptions={{ src: imgPath("title5.png"), w: 2.4, h: 0.7, align: 'center' }}
           >
           <ContentList data={dataList[4]}></ContentList>

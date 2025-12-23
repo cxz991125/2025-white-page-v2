@@ -46,7 +46,7 @@ const TeleplayView = () => {
         <ContentList data={dataList[0]}></ContentList>
       </Wrapper>
       <Wrapper
-        remark="注：口碑指数反映观众对于某一影视内容喜爱程度。通过对剧集播映前后在视频 /社交平台的评分变化、评分人数及正面讨论内容等综合计算"
+        remark="注：口碑指数反映观众对于某一影视内容喜爱程度。通过对剧集播映前后在视频 /社交平台的评分变化、评分人数及正面讨论内容等综合计算。"
         bgImg={<ImgComponent className="w-full top-[-180px]" index="6"></ImgComponent>}
         headerTitle="2025年剧集口碑指数TOP10"
         bannerOptions={{ src: imgPath("title3.png"), w: 2.4, h: 0.24, align: 'center' }}

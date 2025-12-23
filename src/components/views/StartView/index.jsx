@@ -64,11 +64,11 @@ const StartView = () => {
                         <img className='w-full h-full object-cover' src={getImg("feng1.png")} alt="" />
                         <img className='w-full absolute bottom-0' src={getImg("logo.png")} alt="" />
                     </div>
-                    <div className='swiper-slide sec'>
+                    {/* <div className='swiper-slide sec'>
                         <div className="w-full h-full overflow-y-auto" onScroll={handleScroll}>
                             <img className='w-full' src={getImg('feng2.png')} alt="" ref={img}/>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <img className="down-icon" src={getImg('downIcon.png')} alt="" />

@@ -16,7 +16,7 @@ const Wrapper = (props) => (
 );
 
 const ImgComponent = (props) => {
-  return <img className={`top-[-160px] left-[-10px] right-[0px] h-[360px] absolute`} style={{ width: '180%', maxWidth: '200%' }} src={getImg(imgPath(`bg1.png`))} alt="" />
+  return <img className={`left-0 absolute `.concat(props.className || '')} style={{ maxWidth: '200%' }} src={getImg(imgPath(`bg1.png`))} alt="" />
 }
 
 const MusicView = () => {
@@ -26,7 +26,7 @@ const MusicView = () => {
         <img className="w-full banner-img" src={getImg(imgPath('banner5.png'))} style={viewInfo.getRect('music')} alt="" />
       </div>
       <Wrapper
-        bgImg={<ImgComponent className="w-full top-[-80px] left-20px" index="1"></ImgComponent>}
+        bgImg={<ImgComponent className="w-1000px top-[-220px] h-500px" index="1"></ImgComponent>}
         bannerOptions={{ src: imgPath("title1.png"), w: 2.6, h: 0.6, align: 'center' }}
         remark="注：2023年和2024年数据来源于中国音数协数字音乐工委发布《中国数字音乐产业报告（2024）》；2025年数据综合行业统计数据所得，截至2025年12月10日。"
         headerTitle="2023-2025年中国数字音乐市场规模"
@@ -42,7 +42,7 @@ const MusicView = () => {
       </Wrapper>
 
       <Wrapper
-        bgImg={<ImgComponent className="w-full top-[-40px] left-0" index="3"></ImgComponent>}
+        bgImg={<ImgComponent className="w-1000px top-[-220px] h-500px" index="3"></ImgComponent>}
         bannerOptions={{
           src: imgPath("title2.png"),
           w: 2.6,
@@ -56,7 +56,6 @@ const MusicView = () => {
       </Wrapper>
 
       <Wrapper
-        bgImg={<ImgComponent className="w-full top-[-60px] left-0" index="9"></ImgComponent>}
         remark="注：线下演唱会热度根据演唱会在全网的舆情声量计算所得；</br>数据截止日期：2025年12月10日。"
         headerTitle="2025年度演唱会热度TOP10"
       >
@@ -64,7 +63,7 @@ const MusicView = () => {
       </Wrapper>
 
       <Wrapper
-        bgImg={<ImgComponent className="w-full top-[-60px] right-0" index="10"></ImgComponent>}
+        bgImg={<ImgComponent className="w-1000px top-[-220px] h-500px" index="10"></ImgComponent>}
         bannerOptions={{ src: imgPath("title3.png"), w: 2.4, h: 0.6, align: 'center' }}
         remark="注：根据歌曲在由你榜的得分、排名及在榜时长等计算得出的综合得分进行排序，数据截至2025年11月30日。 "
         headerTitle="22025年新曲热度TOP10"
@@ -85,7 +84,7 @@ const MusicView = () => {
       </Wrapper>
 
       <Wrapper
-        bgImg={<ImgComponent className="w-full top-[-200px]" index="11"></ImgComponent>}
+        bgImg={<ImgComponent className="w-1000px top-[-220px] h-500px" index="11"></ImgComponent>}
         remark="注：根据歌曲在浪潮榜得分得出，数据截至2025年11月。 "
         bannerOptions={{ src: imgPath("title4.png"), w: 2.4, h: 0.6, align: 'center' }}
         headerTitle="2025年新曲专业口碑TOP10"
@@ -106,7 +105,7 @@ const MusicView = () => {
       </Wrapper>
 
       <Wrapper
-        bgImg={<ImgComponent className="w-full top-[-200px]" index="11"></ImgComponent>}
+        bgImg={<ImgComponent className="w-1000px top-[-220px] h-500px" index="11"></ImgComponent>}
         remark="注：抽象指数根据抽象事件关键词在全网的舆情声量计算所得；</br>数据截止日期：2025年12月10日。 "
         bannerOptions={{ src: imgPath("title5.png"), w: 2.4, h: 0.6, align: 'center' }}
         headerTitle="2025年华语乐坛抽象排行榜TOP10"
@@ -115,7 +114,7 @@ const MusicView = () => {
       </Wrapper>
 
       <Wrapper
-        bgImg={<ImgComponent className="w-full top-[-40px] left-0" index="3"></ImgComponent>}
+        bgImg={<ImgComponent className="w-1000px top-[-220px] h-500px" index="3"></ImgComponent>}
         className="music-header"
         showHeader={false}
         bannerOptions={{
@@ -129,7 +128,7 @@ const MusicView = () => {
       </Wrapper>
 
       <Wrapper
-        bgImg={<ImgComponent className="w-full top-[-40px] left-0" index="3"></ImgComponent>}
+        bgImg={<ImgComponent className="w-1000px top-[-220px] h-500px" index="3"></ImgComponent>}
         className="music-header"
         showHeader={false}
         bannerOptions={{
@@ -144,7 +143,7 @@ const MusicView = () => {
       </Wrapper>
 
       <Wrapper
-        bgImg={<ImgComponent className="w-full top-[-40px] left-0" index="3"></ImgComponent>}
+        bgImg={<ImgComponent className="w-1000px top-[-220px] h-500px" index="3"></ImgComponent>}
         className="music-header"
         showHeader={false}
         bannerOptions={{
@@ -159,7 +158,7 @@ const MusicView = () => {
       </Wrapper>
 
       <Wrapper
-        bgImg={<ImgComponent className="w-full top-[-40px] left-0" index="3"></ImgComponent>}
+        bgImg={<ImgComponent className="w-1000px top-[-220px] h-500px" index="3"></ImgComponent>}
         className="music-header"
         showHeader={false}
         bannerOptions={{
