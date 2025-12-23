@@ -106,8 +106,8 @@ export const dataList = [
       {
         title: "抽象事件",
         width: 140,
-        render: function(item) {
-          return <span style={{color: '#57b7d6'}}>{item[1]}</span>
+        render: function (item) {
+          return <span style={{ color: '#57b7d6' }}>{item[1]}</span>
         }
       },
       {
@@ -396,7 +396,7 @@ export const chartOptions = [
     xAxis: {
       type: "category",
       boundaryGap: [0, 0.01],
-      data: ["在线k歌","在线音乐", "音乐短视频", "音乐直播"],
+      data: ["在线k歌", "在线音乐", "音乐短视频", "音乐直播"],
       axisLine: {
         show: false,
       },
@@ -413,8 +413,8 @@ export const chartOptions = [
       },
     },
     series: [
-      getBarSeries("#c1d1b6", [89.2, 293.5, 538.5, 1192.3], Object.assign(barSeriesOption, { name: '2024年', barWidth: 16, label: {show: true, fontSize: 10, position: 'top'}})),
-      getBarSeries("#87c8dc", [74.9, 352.8, 566.0, 1236.4], Object.assign(barSeriesOption, { name: '2025年', barWidth: 16, label: { offset: [0, -12], show: true, position: 'top', fontSize: 10 }})),
+      getBarSeries("#c1d1b6", [89.2, 293.5, 538.5, 1192.3], Object.assign(barSeriesOption, { name: '2024年', barWidth: 16, label: { show: true, fontSize: 10, position: 'top', formatter: function ({value}) { return value.toFixed(1) } } })),
+      getBarSeries("#87c8dc", [74.9, 352.8, 566.0, 1236.4], Object.assign(barSeriesOption, { name: '2025年', barWidth: 16, label: { offset: [0, -12], show: true, position: 'top', fontSize: 10,formatter: function ({value}) { return value.toFixed(1) }  } })),
     ],
   },
   {
@@ -483,6 +483,7 @@ export const chartOptions = [
       },
       label: {
         show: true,
+        formatter: function ({value}) { return value.toFixed(1) },
         position: 'top',
         color: '#585858'
       },

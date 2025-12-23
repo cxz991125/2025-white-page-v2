@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { getImg}from "@/common/utils";
+import { getImg } from "@/common/utils";
 import { useEffect, useState, useRef } from 'react'
 import Swiper from 'swiper';
 import './index.scss'
@@ -13,7 +13,7 @@ const StartView = () => {
 
     const img = useRef();
 
-    const [_swiper, setSwiper ] = useState()
+    const [_swiper, setSwiper] = useState()
 
 
     useEffect(() => {
@@ -21,6 +21,17 @@ const StartView = () => {
             direction: 'vertical',
             slidesPerView: "auto",
             spaceBetween: 30,
+            watchOverflow: false, // 关闭溢出监视
+            allowSlidePrev: true,
+            allowSlideNext: true,
+
+            // 回弹设置
+            resistance: true,
+            resistanceRatio: 0.6,
+
+            // 触摸设置
+            touchRatio: 1,
+            simulateTouch: true,
             on: {
                 slideChange(swiper) {
                     if (swiper.isEnd) {
@@ -54,7 +65,7 @@ const StartView = () => {
     useEffect(() => {
         if (progress > 100) return;
         setTimeout(() => setProgress(progress + 1), 10);
-      }, [progress])
+    }, [progress])
 
     return (
         <div className='start-page'>
