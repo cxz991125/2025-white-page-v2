@@ -1044,7 +1044,7 @@ export const chartOptions = [
         },
         data: [
           { value: 65, name: '其他厂牌,37部' },
-          { value: 35, name: '花岛,20部' }
+          { value: 35, name: '听花岛,20部' }
         ],
         label: {
           formatter: '{b}\n{d}%',
