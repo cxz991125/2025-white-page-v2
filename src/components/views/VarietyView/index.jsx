@@ -147,9 +147,9 @@ const VarietyView = () => {
         headerTitle="2025年腾讯娱乐影响力综艺作品TOP10">
         <ContentList data={dataList[6]}></ContentList>
       </Wrapper>
-      <ButtonComponent></ButtonComponent>
-      <div className="w-150vw">
-        <img src={getImg(imgPath(`bg1.png`))} alt="" />
+       <div className="w-full h-300px relative">
+        <img className="absolute w-150vw h-full" style={{maxWidth:'200%'}} src={getImg(imgPath(`bg1.png`))} alt="" />
+        <ButtonComponent></ButtonComponent>
       </div>
     </div>
   );

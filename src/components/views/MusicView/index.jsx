@@ -171,9 +171,9 @@ const MusicView = () => {
       >
         <ContentList data={dataList[7]}></ContentList>
       </Wrapper>
-      <ButtonComponent></ButtonComponent>
-      <div className="w-150vw">
-        <img src={getImg(imgPath(`bg1.png`))} alt="" />
+       <div className="w-full h-300px relative">
+        <img className="absolute w-150vw h-full" style={{maxWidth:'200%'}} src={getImg(imgPath(`bg1.png`))} alt="" />
+        <ButtonComponent></ButtonComponent>
       </div>
     </div>
   );

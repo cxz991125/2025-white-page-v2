@@ -251,9 +251,9 @@ const MovieView = () => {
       <div className="text-center">
         <p className="text-10px" style={{color: '#595959', fontStyle: 'italic'}}>*注：除特殊说明外，本文数据均截至2025年12月10日。</p>
       </div>
-      <ButtonComponent></ButtonComponent>
-      <div className="w-150vw">
-        <img src={getImg(imgPath(`bg1.png`))} alt="" />
+      <div className="w-full h-300px relative">
+        <img className="absolute w-150vw h-full" style={{maxWidth:'200%'}} src={getImg(imgPath(`bg1.png`))} alt="" />
+        <ButtonComponent></ButtonComponent>
       </div>
     </div>
   );

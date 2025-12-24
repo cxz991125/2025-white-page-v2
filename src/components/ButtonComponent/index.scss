@@ -2,8 +2,11 @@
     margin: 50px 0 0px 0;
     display: flex;
     justify-content: center;
-    position: relative;
+    position: absolute;
     z-index: 100;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     .button-inner {
         // background: #4F60C7;
         // border-radius: 18px 18px 18px 18px;
@@ -13,7 +16,5 @@
         // padding: 10px 30px;
         width: 180px;
         height: 54px;
-        position: relative;
-        top: 100px;
     }
 }
