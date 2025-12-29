@@ -9,6 +9,7 @@ import TeleplayView from "./views/TeleplayView";
 import VarietyView from "./views/VarietyView";
 import ChartView from './ChartView';
 import TabView from './TabView'
+import ButtonWarpper from "./ButtonWarpper";
 
 export {
   ButtonComponent,
@@ -21,5 +22,6 @@ export {
   TeleplayView,
   VarietyView,
   ChartView,
-  TabView
+  TabView,
+  ButtonWarpper
 };

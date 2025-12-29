@@ -252,7 +252,7 @@ export const dataList = [
         render: (item, index) => {
           return (<div className="flex items-center">
             <img className="w-30px h-30px mr-10px" src={getImg(imgPath(`tou${index}.png`))}></img>
-            <span className="block w-30px">{item[0]}</span>
+            <span className="block w-30px whitespace-nowrap">{item[0]}</span>
           </div>)
         }
       },

@@ -650,7 +650,7 @@ export const chartOptions = [
 
         name: "动画电影票房(亿元)",
         type: "line",
-        data: [100, 80, 120, 80, 160],
+        data: [100, 80, 120, 80, 290],
         symbolSize: 8,
         label: {
           show: true,
@@ -909,14 +909,14 @@ export const chartOptions = [
       },
     },
     grid: {
-      left: '18%',
+      left: '13%',
       top: '15%',
       bottom: '5%',
       right: '4%'
     },
     xAxis: {
       type: "value",
-      boundaryGap: [0, 0.01],
+      min: 30,
       axisLine: {
         show: false,
       },
@@ -1034,7 +1034,7 @@ export const chartOptions = [
     },
     xAxis: {
       type: "value",
-      boundaryGap: [0, 0.01],
+      min: 30,
       axisLine: {
         show: false,
       },
@@ -1064,7 +1064,7 @@ export const chartOptions = [
       },
       barWidth: 18,
     }),
-    getBarSeries("#df8e84", [39.1, 38.8, 37.1, 37.0, 37.7, 37.0, 32.5], {
+    getBarSeries("#df8e84", [39.1, 38.8, 37.1, 37.0, 37.7, 37.0, 35.5], {
       name: '2线城市',
       stack: 'total',
       itemStyle: {

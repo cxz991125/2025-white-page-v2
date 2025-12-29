@@ -16,7 +16,7 @@ const list = [
 ]
 
 const TabView = (props) => {
-    const [currentKey, setCurrentKey] = useState(0);
+    const [currentKey, setCurrentKey] = useState(3);
 
     const Component = useMemo(() => list[currentKey].component(), [currentKey]);
 

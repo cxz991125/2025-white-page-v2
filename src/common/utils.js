@@ -102,11 +102,11 @@ export const mergetChartOptions = (defaultOptions) => (options) =>
 
   export const viewInfo = {
     rect: {
-      movie: [1080, 1913],
-      teleplay: [1080, 1993],
-      variety: [1080, 1761],
-      music: [1080, 1883],
-      star: [1080, 2012]
+      movie: [1080, 2000],
+      teleplay: [1080, 2000],
+      variety: [1080, 2000],
+      music: [1080, 2000],
+      star: [1080, 2000]
     },
     getRect: function(name) {
       try {

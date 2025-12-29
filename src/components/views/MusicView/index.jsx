@@ -5,6 +5,7 @@ import {
   ContentListHeader,
   ButtonComponent,
   ChartView,
+  ButtonWarpper
 } from "@/components";
 import { chartOptions, dataList } from "@/data/music";
 import { getImg, getImgPath, viewInfo } from "@/common/utils";
@@ -27,7 +28,7 @@ const MusicView = () => {
       </div>
       <Wrapper
         bgImg={<ImgComponent className="w-1000px top-[-220px] h-500px" index="1"></ImgComponent>}
-        bannerOptions={{ src: imgPath("title1.png"), w: 2.6, h: 0.6, align: 'center' }}
+        bannerOptions={{ src: imgPath("title1.png"), w: 2.29, h: 0.62, align: 'center' }}
         remark="注：2023年和2024年数据来源于中国音数协数字音乐工委发布《中国数字音乐产业报告（2024）》；2025年数据综合行业统计数据所得，截至2025年12月10日。"
         headerTitle="2023-2025年中国数字音乐市场规模"
       >
@@ -45,8 +46,8 @@ const MusicView = () => {
         bgImg={<ImgComponent className="w-1000px top-[-220px] h-500px" index="3"></ImgComponent>}
         bannerOptions={{
           src: imgPath("title2.png"),
-          w: 2.6,
-          h: 0.26,
+          w: 2.17,
+          h: 0.25,
           align: "center",
         }}
         remark="注：线下演出场次根据网络公开数据收集，数据截至2025年12月10日；2023-2024年演唱会&音乐节票房数据根据中国演出行业协会X灯塔专业推出的《竞逐升级、多元发展——2024大型营业性演出市场趋势及特点分析》计算得出，2025年演唱会&音乐节票房数据为收集灯塔专业版演出数据推算得出。"
@@ -64,9 +65,9 @@ const MusicView = () => {
 
       <Wrapper
         bgImg={<ImgComponent className="w-1000px top-[-220px] h-500px" index="10"></ImgComponent>}
-        bannerOptions={{ src: imgPath("title3.png"), w: 2.4, h: 0.6, align: 'center' }}
+        bannerOptions={{ src: imgPath("title3.png"), w: 2.64, h: 0.61, align: 'center' }}
         remark="注：根据歌曲在由你榜的得分、排名及在榜时长等计算得出的综合得分进行排序，数据截至2025年11月30日。 "
-        headerTitle="22025年新曲热度TOP10"
+        headerTitle="2025年新曲热度TOP10"
       >
         <ContentList data={dataList[1]}></ContentList>
         <div className="flex justify-center">
@@ -85,8 +86,8 @@ const MusicView = () => {
 
       <Wrapper
         bgImg={<ImgComponent className="w-1000px top-[-220px] h-500px" index="11"></ImgComponent>}
-        remark="注：根据歌曲在浪潮榜得分得出，数据截至2025年11月。 "
-        bannerOptions={{ src: imgPath("title4.png"), w: 2.4, h: 0.6, align: 'center' }}
+        remark="注：根据歌曲在浪潮榜得分得出，数据截至2025年11月榜。 "
+        bannerOptions={{ src: imgPath("title4.png"), w: 2.45, h: 0.61, align: 'center' }}
         headerTitle="2025年新曲专业口碑TOP10"
       >
         <ContentList data={dataList[2]}></ContentList>
@@ -107,7 +108,7 @@ const MusicView = () => {
       <Wrapper
         bgImg={<ImgComponent className="w-1000px top-[-220px] h-500px" index="11"></ImgComponent>}
         remark="注：抽象指数根据抽象事件关键词在全网的舆情声量计算所得；</br>数据截止日期：2025年12月10日。 "
-        bannerOptions={{ src: imgPath("title5.png"), w: 2.4, h: 0.6, align: 'center' }}
+        bannerOptions={{ src: imgPath("title5.png"), w: 2.4, h: 0.61, align: 'center' }}
         headerTitle="2025年华语乐坛抽象排行榜TOP10"
       >
         <ContentList data={dataList[3]}></ContentList>
@@ -119,8 +120,8 @@ const MusicView = () => {
         showHeader={false}
         bannerOptions={{
           src: imgPath("title6.png"),
-          w: 2.4,
-          h: 0.24,
+          w: 2.55,
+          h: 0.25,
           align: "center",
         }}
       >
@@ -133,8 +134,8 @@ const MusicView = () => {
         showHeader={false}
         bannerOptions={{
           src: imgPath("title7.png"),
-          w: 2.4,
-          h: 0.24,
+          w: 2.55,
+          h: 0.25,
           align: "center",
         }}
         headerTitle="2024年度热门女歌手"
@@ -148,8 +149,8 @@ const MusicView = () => {
         showHeader={false}
         bannerOptions={{
           src: imgPath("title8.png"),
-          w: 2.4,
-          h: 0.54,
+          w: 2.48,
+          h: 0.61,
           align: "center",
         }}
         headerTitle="2024年度热门女歌手"
@@ -163,18 +164,15 @@ const MusicView = () => {
         showHeader={false}
         bannerOptions={{
           src: imgPath("title9.png"),
-          w: 2.4,
-          h: 0.54,
+          w: 2.47,
+          h: 0.61,
           align: "center",
         }}
         headerTitle="2024年度热门女歌手"
       >
         <ContentList data={dataList[7]}></ContentList>
       </Wrapper>
-       <div className="w-full h-300px relative">
-        <img className="absolute w-150vw h-full" style={{maxWidth:'200%'}} src={getImg(imgPath(`bg1.png`))} alt="" />
-        <ButtonComponent></ButtonComponent>
-      </div>
+      <ButtonWarpper src={getImg(imgPath(`bg1.png`))}></ButtonWarpper>
     </div>
   );
 };

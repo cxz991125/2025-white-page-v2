@@ -73,7 +73,7 @@ const StartView = () => {
                 <div className='swiper-wrapper w-full h-full'>
                     <div className='swiper-slide swiper-slide-active relative'>
                         <img className='w-full h-full object-cover' src={getImg("feng1.png")} alt="" />
-                        <img className='w-full absolute bottom-0' src={getImg("logo.png")} alt="" />
+                        <img className='w-full absolute bottom-0' src={getImg("logo1.png")} alt="" />
                     </div>
                     {/* <div className='swiper-slide sec'>
                         <div className="w-full h-full overflow-y-auto" onScroll={handleScroll}>

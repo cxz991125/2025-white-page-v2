@@ -5,6 +5,7 @@ import {
   ContentListHeader,
   ButtonComponent,
   ChartView,
+  ButtonWarpper
 } from "@/components";
 import { chartOptions, dataList } from "@/data/movie";
 
@@ -32,8 +33,8 @@ const MovieView = () => {
       <Wrapper
         remark="注：2025年票房截至12月18日。"
         bgImg={<ImgComponent className="w-full top-[-80px]" index="1"></ImgComponent>}
-        headerTitle="22019-2025年中国电影总票房及增幅"
-        bannerOptions={{ src: imgPath("title1.png"), w: 2.6, h: 0.24, align: 'center' }}
+        headerTitle="2019-2025年中国电影总票房及增幅"
+        bannerOptions={{ src: imgPath("title1.png"), w: 2.89, h: 0.25, align: 'center' }}
       >
         <ChartView height="300px" options={chartOptions[0]}></ChartView>
       </Wrapper>
@@ -42,7 +43,7 @@ const MovieView = () => {
         remark="注：影片票房数据统计日期截至2025年12月18日。"
         bgImg={<ImgComponent className="w-full top-[-210px] left-0" index="5"></ImgComponent>}
         headerTitle="2025年电影票房TOP10"
-        bannerOptions={{ src: imgPath("title2.png"), w: 2.6, h: 0.24, align: 'center' }}
+        bannerOptions={{ src: imgPath("title2.png"), w: 2.91, h: 0.25, align: 'center' }}
       >
         <ContentList data={dataList[0]}></ContentList>
       </Wrapper>
@@ -53,8 +54,8 @@ const MovieView = () => {
         headerTitle="2025年《哪吒之魔童闹海》单片票房占比"
         bannerOptions={{
           src: imgPath("title3.png"),
-          w: 2.6,
-          h: 0.24,
+          w: 2.84,
+          h: 0.25,
           align: "center",
         }}
       >
@@ -71,7 +72,7 @@ const MovieView = () => {
       <Wrapper
         bgImg={<ImgComponent className="w-200px top-[-100px] right-0" index="4"></ImgComponent>}
         headerTitle="全球影史票房TOP10"
-        bannerOptions={{ src: imgPath("title4.png"), w: 2.4, h: 0.6, align: 'center' }}
+        bannerOptions={{ src: imgPath("title4.png"), w: 2.33, h: 0.6, align: 'center' }}
       >
         <ContentList data={dataList[1]}></ContentList>
       </Wrapper>
@@ -82,7 +83,7 @@ const MovieView = () => {
         headerTitle="2021-2025年动画电影票房、票房占比及上映数量"
         bannerOptions={{
           src: imgPath("title5.png"),
-          w: 2.4,
+          w: 2.19,
           h: 0.6,
           align: "center",
         }}
@@ -95,8 +96,8 @@ const MovieView = () => {
         headerTitle="2019-2025年影院数及银幕数"
         bannerOptions={{
           src: imgPath("title6.png"),
-          w: 2.6,
-          h: 0.24,
+          w: 2.87,
+          h: 0.25,
           align: "center",
         }}
       >
@@ -108,8 +109,8 @@ const MovieView = () => {
         headerTitle="2019-2025年观影人次及增幅"
         bannerOptions={{
           src: imgPath("title7.png"),
-          w: 1.8,
-          h: 0.26,
+          w: 1.56,
+          h: 0.25,
           align: "center",
         }}
       >
@@ -120,8 +121,8 @@ const MovieView = () => {
         headerTitle="2019-2025年电影相关话题讨论用户年龄分布"
         bannerOptions={{
           src: imgPath("title8.png"),
-          w: 1.8,
-          h: 0.26,
+          w: 1.89,
+          h: 0.25,
           align: "center",
         }}
       >
@@ -132,7 +133,7 @@ const MovieView = () => {
         headerTitle="2019-2025年分线城市贡献率"
         bannerOptions={{
           src: imgPath("title9.png"),
-          w: 2.6,
+          w: 2.88,
           h: 0.6,
           align: "center",
         }}
@@ -145,7 +146,7 @@ const MovieView = () => {
         showHeader={false}
         bannerOptions={{
           src: imgPath("title10.png"),
-          w: 2.2,
+          w: 2.11,
           h: 0.6,
           align: "center",
         }}
@@ -159,7 +160,7 @@ const MovieView = () => {
         showHeader={false}
         bannerOptions={{
           src: imgPath("title11.png"),
-          w: 2.2,
+          w: 2.09,
           h: 0.6,
           align: "center",
         }}
@@ -172,7 +173,7 @@ const MovieView = () => {
         showHeader={false}
         bannerOptions={{
           src: imgPath("title12.png"),
-          w: 2.2,
+          w: 2.11,
           h: 0.6,
           align: "center",
         }}
@@ -186,7 +187,7 @@ const MovieView = () => {
         showHeader={false}
         bannerOptions={{
           src: imgPath("title13.png"),
-          w: 2.2,
+          w: 2.09,
           h: 0.6,
           align: "center",
         }}
@@ -200,7 +201,7 @@ const MovieView = () => {
         className="movie-header"
         bannerOptions={{
           src: imgPath("title14.png"),
-          w: 2,
+          w: 1.84,
           h: 0.6,
           align: "center",
         }}
@@ -214,7 +215,7 @@ const MovieView = () => {
         className="movie-header"
         bannerOptions={{
           src: imgPath("title15.png"),
-          w: 2.2,
+          w: 2.01,
           h: 0.6,
           align: "center",
         }}
@@ -227,7 +228,7 @@ const MovieView = () => {
         className="movie-header"
         bannerOptions={{
           src: imgPath("title16.png"),
-          w: 2.4,
+          w: 2.61,
           h: 0.6,
           align: "center",
         }}
@@ -241,7 +242,7 @@ const MovieView = () => {
         showHeader={false}
         bannerOptions={{
           src: imgPath("title17.png"),
-          w: 2.4,
+          w: 2.61,
           h: 0.6,
           align: "center",
         }}
@@ -251,10 +252,7 @@ const MovieView = () => {
       <div className="text-center">
         <p className="text-10px" style={{color: '#595959', fontStyle: 'italic'}}>*注：除特殊说明外，本文数据均截至2025年12月10日。</p>
       </div>
-      <div className="w-full h-300px relative">
-        <img className="absolute w-150vw h-full" style={{maxWidth:'200%'}} src={getImg(imgPath(`bg1.png`))} alt="" />
-        <ButtonComponent></ButtonComponent>
-      </div>
+      <ButtonWarpper src={getImg(imgPath(`bg1.png`))}></ButtonWarpper>
     </div>
   );
 };

@@ -12,7 +12,7 @@ export const dataList = [
       },
       {
         title: "剧名",
-        width: 80,
+        width: 110,
         render: function (item) {
           const n = item[1]
           return <span style={{ color: n != '地球超新鲜' && n != '一路繁花' ? '#81bd84' : '#595959' }}>{n}</span>
@@ -20,7 +20,7 @@ export const dataList = [
       },
       {
         title: "热度指数",
-        width: 70,
+        width: 60,
       },
       {
         title: "播出平台",
@@ -49,7 +49,7 @@ export const dataList = [
       },
       {
         title: "剧名",
-        width: 80,
+        width: 110,
       },
       {
         title: "口碑指数",
@@ -469,6 +469,7 @@ export const chartOptions = [
           fontWeight: 'bold',
           lineHeight: 20,
           textAlign: 'center',
+          width: 120
         },
         labelLayout: {
           hideOverlap: false

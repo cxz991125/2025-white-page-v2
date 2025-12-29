@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import WindiCSS from "vite-plugin-windicss";
 import legacy from '@vitejs/plugin-legacy';
+import viteImagemin from 'vite-plugin-imagemin'
 import path from 'path';
 import { configUrl } from './src/common/config';
 
@@ -48,6 +49,17 @@ export default defineConfig({
     WindiCSS(),
 
     react(),
+
+    viteImagemin({
+      pngquant: {
+        quality: [0.8, 0.9],
+        speed: 4,
+      },
+      // 有损PNG压缩
+      optipng: {
+        optimizationLevel: 7,
+      },
+    })
 
     // legacy({
     //   targets:['defaults','not IE 11']
