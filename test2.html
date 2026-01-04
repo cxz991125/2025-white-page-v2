@@ -1,46 +1,597 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-   <meta charset="utf-8">
-   <title>ECharts多维柱状图示例</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>独立柱状图与折线图</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        @media (max-width: 1100px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .chart-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .chart-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .chart-header {
+            background: linear-gradient(to right, #4a6fa5, #6a93cb);
+            color: white;
+            padding: 20px 30px;
+        }
+        
+        .chart-header h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .chart-header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        
+        .chart-content {
+            padding: 25px 30px;
+        }
+        
+        .chart-container {
+            width: 100%;
+            height: 400px;
+        }
+        
+        .data-source {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #666;
+            text-align: right;
+            padding-right: 10px;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .controls button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .btn-primary {
+            background: #4a6fa5;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #3a5a8a;
+        }
+        
+        .btn-secondary {
+            background: #f0f2f5;
+            color: #333;
+        }
+        
+        .btn-secondary:hover {
+            background: #e4e7eb;
+        }
+        
+        .stats-summary {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .stat-item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            border-left: 4px solid #4a6fa5;
+        }
+        
+        .stat-value {
+            font-size: 22px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .stat-label {
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-   <div id="chart_container" style="width: 600px; height: 400px;"></div>
-   <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
-   <script>
-       // 准备数据
-       let data = [
-           {product: 'A', area: 'Shanghai', sales: 800},
-           {product: 'B', area: 'Shanghai', sales: 1200},
-           {product: 'A', area: 'Beijing', sales: 1000},
-           {product: 'B', area: 'Beijing', sales: 1400},
-       ];
-       
-       // 配置ECharts参数
-       let option = {
-           legend: {},
-           tooltip: {},
-           dataset: {
-               dimensions: ['area', 'product', 'sales'],
-               source: data
-           },
-           xAxis: {
-               type: 'category',
-               axisLabel: {
-                   interval: 0,
-                   rotate: 45
-               }
-           },
-           yAxis: {},
-           series: [
-               {type: 'bar', seriesLayoutBy: 'row'},
-               {type: 'bar', seriesLayoutBy: 'row'}
-           ]
-       };
-       
-       // 渲染ECharts图表
-       let chart = echarts.init(document.getElementById('chart_container'));
-       chart.setOption(option);
-   </script>
+    <div class="container">
+        <!-- 柱状图卡片 -->
+        <div class="chart-card">
+            <div class="chart-header">
+                <h2>年度增幅对比（柱状图）</h2>
+                <p>2019-2025年各年度增幅数据，绿色表示正增长，红色表示负增长</p>
+            </div>
+            <div class="chart-content">
+                <div id="barChart" class="chart-container"></div>
+                <div class="data-source">数据来源：模拟数据 | 最后更新：2025-12-29</div>
+                
+                <div class="controls">
+                    <button class="btn-primary" onclick="changeBarView('vertical')">垂直视图</button>
+                    <button class="btn-secondary" onclick="changeBarView('horizontal')">水平视图</button>
+                    <button class="btn-secondary" onclick="toggleBarLabels()">切换数值标签</button>
+                    <button class="btn-primary" onclick="downloadChart('barChart')">下载图片</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 折线图卡片 -->
+        <div class="chart-card">
+            <div class="chart-header" style="background: linear-gradient(to right, #d35400, #e67e22);">
+                <h2>人次变化趋势（折线图）</h2>
+                <p>2019-2025年各年度人次数据，展示变化趋势和增长率</p>
+            </div>
+            <div class="chart-content">
+                <div class="stats-summary">
+                    <div class="stat-item">
+                        <div class="stat-value">112.7%</div>
+                        <div class="stat-label">最高增幅</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">-68.1%</div>
+                        <div class="stat-label">最低增幅</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">17.4%</div>
+                        <div class="stat-label">平均增幅</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">7年</div>
+                        <div class="stat-label">数据周期</div>
+                    </div>
+                </div>
+                
+                <div id="lineChart" class="chart-container"></div>
+                <div class="data-source">数据来源：模拟数据 | 最后更新：2025-12-29</div>
+                
+                <div class="controls">
+                    <button class="btn-primary" onclick="toggleLineType()">切换曲线/直线</button>
+                    <button class="btn-secondary" onclick="toggleLineArea()">切换面积图</button>
+                    <button class="btn-secondary" onclick="toggleLineMarkPoint()">切换标记点</button>
+                    <button class="btn-primary" onclick="downloadChart('lineChart')">下载图片</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>© 2025 数据可视化展示 | 柱状图与折线图独立展示，互不影响</p>
+    </div>
+
+    <script>
+        // 初始化图表
+        const barChart = echarts.init(document.getElementById('barChart'));
+        const lineChart = echarts.init(document.getElementById('lineChart'));
+        
+        // 数据
+        const years = ['2019', '2020', '2021', '2022', '2023', '2024', '2025'];
+        const increments = [112.7, 82.5, 17.4, -22.1, -39.0, -68.1, 0]; // 增幅数据
+        
+        // 为折线图生成人次数据（模拟数据，与增幅数据不同）
+        const personTimes = [15.2, 27.8, 50.7, 39.5, 24.1, 7.7, 7.7]; // 单位：亿人
+        
+        // 柱状图配置
+        let barOption = {
+            backgroundColor: '#fff',
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                },
+                formatter: function(params) {
+                    const value = params[0].value;
+                    const sign = value >= 0 ? '+' : '';
+                    return `${params[0].name}<br/>增幅: <span style="color:${value >= 0 ? '#52c41a' : '#ff4d4f'};font-weight:bold">${sign}${value}%</span>`;
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '12%',
+                top: '10%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                data: years,
+                axisLine: {
+                    lineStyle: {
+                        color: '#333'
+                    }
+                },
+                axisLabel: {
+                    fontSize: 14,
+                    fontWeight: 'bold'
+                }
+            },
+            yAxis: {
+                type: 'value',
+                name: '增幅 (%)',
+                nameTextStyle: {
+                    fontSize: 14,
+                    fontWeight: 'bold'
+                },
+                axisLabel: {
+                    formatter: '{value}%'
+                },
+                splitLine: {
+                    lineStyle: {
+                        type: 'dashed',
+                        color: '#e8e8e8'
+                    }
+                }
+            },
+            series: [
+                {
+                    name: '增幅',
+                    type: 'bar',
+                    barWidth: '60%',
+                    data: increments.map((value, index) => ({
+                        value: value,
+                        itemStyle: {
+                            color: value >= 0 ? 
+                                new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                    { offset: 0, color: '#52c41a' },
+                                    { offset: 1, color: '#a7d77c' }
+                                ]) : 
+                                new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                    { offset: 0, color: '#ff4d4f' },
+                                    { offset: 1, color: '#ff7c7c' }
+                                ])
+                        }
+                    })),
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: function(params) {
+                            const sign = params.value >= 0 ? '+' : '';
+                            return `${sign}${params.value}%`;
+                        },
+                        fontSize: 13,
+                        fontWeight: 'bold'
+                    },
+                    emphasis: {
+                        itemStyle: {
+                            shadowBlur: 10,
+                            shadowColor: 'rgba(0, 0, 0, 0.3)'
+                        }
+                    }
+                }
+            ],
+            animation: true,
+            animationDuration: 1500
+        };
+        
+        // 折线图配置
+        let lineOption = {
+            backgroundColor: '#fff',
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#6a7985'
+                    }
+                },
+                formatter: function(params) {
+                    let result = `${params[0].name}<br/>`;
+                    params.forEach(item => {
+                        const sign = item.value >= 0 ? '+' : '';
+                        if (item.seriesName === '人次') {
+                            result += `${item.marker} ${item.seriesName}: <span style="font-weight:bold">${item.value}亿人</span><br/>`;
+                        } else {
+                            result += `${item.marker} ${item.seriesName}: <span style="color:${item.value >= 0 ? '#52c41a' : '#ff4d4f'};font-weight:bold">${sign}${item.value}%</span><br/>`;
+                        }
+                    });
+                    return result;
+                }
+            },
+            legend: {
+                data: ['人次', '增幅'],
+                top: 10,
+                textStyle: {
+                    fontSize: 14
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '12%',
+                top: '18%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: years,
+                axisLine: {
+                    lineStyle: {
+                        color: '#333'
+                    }
+                }
+            },
+            yAxis: [
+                {
+                    type: 'value',
+                    name: '人次 (亿人)',
+                    position: 'left',
+                    axisLine: {
+                        show: true,
+                        lineStyle: {
+                            color: '#d35400'
+                        }
+                    },
+                    axisLabel: {
+                        formatter: '{value}'
+                    }
+                },
+                {
+                    type: 'value',
+                    name: '增幅 (%)',
+                    position: 'right',
+                    axisLine: {
+                        show: true,
+                        lineStyle: {
+                            color: '#3498db'
+                        }
+                    },
+                    axisLabel: {
+                        formatter: '{value}%'
+                    },
+                    splitLine: {
+                        show: false
+                    }
+                }
+            ],
+            series: [
+                {
+                    name: '人次',
+                    type: 'line',
+                    smooth: true,
+                    lineStyle: {
+                        width: 4,
+                        color: '#d35400'
+                    },
+                    symbol: 'circle',
+                    symbolSize: 10,
+                    itemStyle: {
+                        color: '#d35400'
+                    },
+                    areaStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: 'rgba(211, 84, 0, 0.3)' },
+                            { offset: 1, color: 'rgba(211, 84, 0, 0.05)' }
+                        ])
+                    },
+                    data: personTimes,
+                    yAxisIndex: 0,
+                    markPoint: {
+                        data: [
+                            { type: 'max', name: '最大值' },
+                            { type: 'min', name: '最小值' }
+                        ],
+                        symbolSize: 60,
+                        label: {
+                            formatter: '{c}亿人'
+                        }
+                    }
+                },
+                {
+                    name: '增幅',
+                    type: 'line',
+                    smooth: true,
+                    lineStyle: {
+                        width: 3,
+                        color: '#3498db',
+                        type: 'dashed'
+                    },
+                    symbol: 'diamond',
+                    symbolSize: 8,
+                    itemStyle: {
+                        color: '#3498db'
+                    },
+                    data: increments,
+                    yAxisIndex: 1,
+                    label: {
+                        show: true,
+                        position: 'top',
+                        formatter: function(params) {
+                            const sign = params.value >= 0 ? '+' : '';
+                            return `${sign}${params.value}%`;
+                        }
+                    }
+                }
+            ],
+            animation: true,
+            animationDuration: 2000
+        };
+        
+        // 应用配置
+        barChart.setOption(barOption);
+        lineChart.setOption(lineOption);
+        
+        // 窗口大小变化时重绘
+        window.addEventListener('resize', function() {
+            barChart.resize();
+            lineChart.resize();
+        });
+        
+        // 柱状图切换视图函数
+        function changeBarView(type) {
+            if (type === 'horizontal') {
+                barOption.xAxis.type = 'value';
+                barOption.yAxis.type = 'category';
+                barOption.yAxis.data = years;
+                barOption.xAxis.data = null;
+                barOption.xAxis.name = '增幅 (%)';
+                barOption.yAxis.name = '年份';
+                barOption.series[0].label.position = 'right';
+            } else {
+                barOption.xAxis.type = 'category';
+                barOption.yAxis.type = 'value';
+                barOption.xAxis.data = years;
+                barOption.yAxis.data = null;
+                barOption.yAxis.name = '增幅 (%)';
+                barOption.xAxis.name = '';
+                barOption.series[0].label.position = 'top';
+            }
+            
+            barChart.setOption(barOption);
+        }
+        
+        // 切换柱状图数值标签显示
+        let barLabelsVisible = true;
+        function toggleBarLabels() {
+            barLabelsVisible = !barLabelsVisible;
+            barOption.series[0].label.show = barLabelsVisible;
+            barChart.setOption(barOption);
+        }
+        
+        // 切换折线图曲线/直线
+        let isLineSmooth = true;
+        function toggleLineType() {
+            isLineSmooth = !isLineSmooth;
+            lineOption.series[0].smooth = isLineSmooth;
+            lineOption.series[1].smooth = isLineSmooth;
+            lineChart.setOption(lineOption);
+        }
+        
+        // 切换折线图面积显示
+        let isAreaVisible = true;
+        function toggleLineArea() {
+            isAreaVisible = !isAreaVisible;
+            lineOption.series[0].areaStyle = isAreaVisible ? {
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    { offset: 0, color: 'rgba(211, 84, 0, 0.3)' },
+                    { offset: 1, color: 'rgba(211, 84, 0, 0.05)' }
+                ])
+            } : null;
+            lineChart.setOption(lineOption);
+        }
+        
+        // 切换折线图标记点显示
+        let isMarkPointVisible = true;
+        function toggleLineMarkPoint() {
+            isMarkPointVisible = !isMarkPointVisible;
+            lineOption.series[0].markPoint = isMarkPointVisible ? {
+                data: [
+                    { type: 'max', name: '最大值' },
+                    { type: 'min', name: '最小值' }
+                ],
+                symbolSize: 60,
+                label: {
+                    formatter: '{c}亿人'
+                }
+            } : null;
+            lineChart.setOption(lineOption);
+        }
+        
+        // 下载图表图片
+        function downloadChart(chartId) {
+            let chartInstance;
+            let fileName;
+            
+            if (chartId === 'barChart') {
+                chartInstance = barChart;
+                fileName = '年度增幅柱状图.png';
+            } else {
+                chartInstance = lineChart;
+                fileName = '人次变化折线图.png';
+            }
+            
+            const imgData = chartInstance.getDataURL({
+                type: 'png',
+                pixelRatio: 2,
+                backgroundColor: '#fff'
+            });
+            
+            const link = document.createElement('a');
+            link.href = imgData;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+        
+        // 添加键盘快捷键
+        document.addEventListener('keydown', function(event) {
+            // Ctrl+1 下载柱状图
+            if (event.ctrlKey && event.key === '1') {
+                downloadChart('barChart');
+                event.preventDefault();
+            }
+            // Ctrl+2 下载折线图
+            else if (event.ctrlKey && event.key === '2') {
+                downloadChart('lineChart');
+                event.preventDefault();
+            }
+            // Ctrl+H 切换柱状图视图
+            else if (event.ctrlKey && event.key === 'h') {
+                changeBarView('horizontal');
+                event.preventDefault();
+            }
+            // Ctrl+V 切换柱状图视图
+            else if (event.ctrlKey && event.key === 'v') {
+                changeBarView('vertical');
+                event.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html>

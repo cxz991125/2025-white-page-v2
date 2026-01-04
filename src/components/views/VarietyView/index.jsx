@@ -105,10 +105,13 @@ const VarietyView = () => {
       </Wrapper>
 
       <Wrapper
-        headerStyle={{ height: '50px' }}
+        headerStyle={{ padding: 0}}
         remark="注：团体IP热度为2025年团体IP中两个及以上成员担任固定嘉宾的综艺的热度指数均值；团体IP口碑为团体IP社媒讨论净情感度（NSR），社媒净情感度NSR=(正面占比-负面占比)/（正面占比+负面占比）*100；"
         bannerOptions={{ src: imgPath("title9.png"), w: 2.54, h: 0.25, align: 'center' }}
-        headerContent={<span className="text-center p-10px">2023-2025年十个勤天、院人、0713团体IP<br/>综艺热度、舆情口碑</span>}>
+        headerContent={<div className="text-center py-10px">
+          <p className="whitespace-nowrap">2023-2025年十个勤天、院人、0713团体IP</p>
+          <p>综艺热度、舆情口碑</p>
+        </div>}>
         <ChartView height="40px" options={chartOptions[6]}></ChartView>
         <ChartView height="100px" options={chartOptions[7]}></ChartView>
         <ChartView height="100px" options={chartOptions[8]}></ChartView>
@@ -116,36 +119,46 @@ const VarietyView = () => {
       </Wrapper>
 
       <Wrapper
+        className="variety-header"
+        showHeader={false}
         bgImg={<ImgComponent className="w-full top-[-120px] left-20px" index="1"></ImgComponent>}
-        bannerOptions={{ src: imgPath("title10.png"), w: 3.09, h: 0.25, align: 'center' }}
+        bannerOptions={{ src: imgPath("title10-1.png"), w: 2.25, h: 0.6, align: 'center' }}
         headerTitle="2025年综艺男艺人热度TOP10">
         <ContentList data={dataList[2]}></ContentList>
       </Wrapper>
 
       <Wrapper
+        className="variety-header"
+        showHeader={false}
         bgImg={<ImgComponent className="w-200px top-[-100px] right-0" index="4"></ImgComponent>}
-        bannerOptions={{ src: imgPath("title11.png"), w: 3.1, h: 0.25, align: 'center' }}
+        bannerOptions={{ src: imgPath("title11-1.png"), w: 2.25, h: 0.6, align: 'center' }}
         headerTitle="2025年综艺女艺人热度TOP10">
         <ContentList data={dataList[3]}></ContentList>
       </Wrapper>
 
       <Wrapper
+        className="variety-header"
+        showHeader={false}
         bgImg={<ImgComponent className="w-200px top-[-100px] right-0" index="4"></ImgComponent>}
-        bannerOptions={{ src: imgPath("title12.png"), w: 3.1, h: 0.25, align: 'center' }}
+        bannerOptions={{ src: imgPath("title12-1.png"), w: 2.25, h: 0.6, align: 'center' }}
         headerTitle="2025年综艺男艺人口碑TOP10">
         <ContentList data={dataList[4]}></ContentList>
       </Wrapper>
 
 
       <Wrapper
+        className="variety-header"
+        showHeader={false}
         bgImg={<ImgComponent className="w-full top-[-40px] left-0" index="3"></ImgComponent>}
-        bannerOptions={{ src: imgPath("title14.png"), w: 3.1, h: 0.24, align: 'center' }}
+        bannerOptions={{ src: imgPath("title14-1.png"), w: 2.25, h: 0.6, align: 'center' }}
         headerTitle="2025年综艺女艺人口碑TOP10">
         <ContentList data={dataList[5]}></ContentList>
       </Wrapper>
       <Wrapper
+        className="variety-header"
+        showHeader={false}
         bgImg={<ImgComponent className="w-full top-[-40px] left-0" index="3"></ImgComponent>}
-        bannerOptions={{ src: imgPath("title15.png"), w: 2.82, h: 0.61, align: 'center' }}
+        bannerOptions={{ src: imgPath("title15-1.png"), w: 2.81, h: 0.60, align: 'center' }}
         headerTitle="2025年腾讯娱乐影响力综艺作品TOP10">
         <ContentList data={dataList[6]}></ContentList>
       </Wrapper>

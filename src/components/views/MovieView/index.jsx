@@ -66,7 +66,7 @@ const MovieView = () => {
         bgImg={<ImgComponent className="w-200px top-[-100px] right-0" index="4"></ImgComponent>}
         headerTitle="2025年各票房量级影片数量分布"
       >
-        <ChartView options={chartOptions[2]}></ChartView>
+        <ChartView remark="单位:部" options={chartOptions[2]}></ChartView>
       </Wrapper>
 
       <Wrapper

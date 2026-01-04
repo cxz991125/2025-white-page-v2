@@ -709,7 +709,7 @@ export const chartOptions = [
         itemWith: 8,
         itemHeight: 8,
         icon: 'circle',
-        top: '10%',
+        top: '16%',
         left: '12%',
         textStyle: {
           color: '#595959'
@@ -717,7 +717,7 @@ export const chartOptions = [
       },
       {
         data: ['云包场剧集数量占比'],
-        top: '10%',
+        top: '16%',
         left: '50%',
         itemWith: 10,
         itemHeight: 10,

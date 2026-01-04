@@ -36,7 +36,7 @@ const TeleplayView = () => {
         remark="注：备案/发行数量包含电视剧+网络剧，数据来源为广电总局，2025年备案数量更新至10月，其中8-10月统计常规剧集备案数量，全年数据为估算值；发行数量更新至第三季度，全年数据为估算值。"
         bannerOptions={{ src: imgPath("title1.png"), w: 2.19, h: 0.25, align: 'center' }}
       >
-        <ChartView options={chartOptions[0]}></ChartView>
+        <ChartView remark="单位:部" options={chartOptions[0]}></ChartView>
       </Wrapper>
       <Wrapper
         bgImg={<ImgComponent className="w-full top-[-40px] left-0" index="3"></ImgComponent>}
@@ -75,7 +75,7 @@ const TeleplayView = () => {
         remark="注：云包场为公开数据统计。"
         bannerOptions={{ src: imgPath("title6.png"), w: 3.08, h: 0.25, align: 'center' }}
       >
-        <ChartView options={chartOptions[3]}></ChartView>
+        <ChartView height="300px" remark="单位:部" options={chartOptions[3]}></ChartView>
       </Wrapper>
       <Wrapper
         bgImg={<ImgComponent className="w-full top-[-180px]" index="6"></ImgComponent>}

@@ -116,7 +116,7 @@ export const dataList = [
       ["6", "于适", "79.1"],
       ["7", "王宝强", "79.0"],
       ["8", "朱一龙", "78.8"],
-      ["9", "陈佩斯", "78.8"],
+      ["8", "陈佩斯", "78.8"],
       ["10", "吴磊", "78.6"],
     ],
   },
@@ -142,7 +142,7 @@ export const dataList = [
       ["3", "赵丽颖", "76.1"],
       ["4", "张子枫", "75.8"],
       ["5", "高叶", "75.7"],
-      ["6", "章子怡", "75.7"],
+      ["5", "章子怡", "75.7"],
       ["7", "宋佳", "75.1"],
       ["8", "张小斐", "75.0"],
       ["9", "庄达菲", "74.9"],
@@ -207,7 +207,7 @@ export const dataList = [
       ["10", "倪妮", "72.3"],
     ],
   },
-    {
+  {
     columns: [
       {
         title: "排名",
@@ -228,19 +228,19 @@ export const dataList = [
       }
     ],
     data: [
-      ["1","哪吒","吕艳婷/囧森瑟夫</br>哪吒之魔童闹海", "93.9"],
-      ["2","敖丙","瀚墨</br>哪吒之魔童闹海", "87.5"],
-      ["3","熊大","张伟</br>熊出没·重启未来", "85.9"],
-      ["4","敖光","雨辰</br>哪吒之魔童闹海", "84.1"],
-      ["5","郭靖","肖战</br>射雕英雄传：侠之大者", "83.9"],
-      ["6","尼克","杰森·贝特曼/张震</br>疯狂动物城2", "83.7 "],
-      ["7","朱迪","金妮弗·古德温/季冠霖</br>疯狂动物城2", "83.6 "],
-      ["8","申公豹","杨卫</br>哪吒之魔童闹海", "82.8 "],
-      ["9","刘春和","易烊千玺</br>小小的我", "81.9 "],
-      ["10","毕正明","王安宇</br>毕正明的证明", "81.7 "],
+      ["1", "哪吒", "吕艳婷/囧森瑟夫</br>哪吒之魔童闹海", "93.9"],
+      ["2", "敖丙", "瀚墨</br>哪吒之魔童闹海", "87.5"],
+      ["3", "熊大", "张伟</br>熊出没·重启未来", "85.9"],
+      ["4", "敖光", "雨辰</br>哪吒之魔童闹海", "84.1"],
+      ["5", "郭靖", "肖战</br>射雕英雄传：侠之大者", "83.9"],
+      ["6", "尼克", "杰森·贝特曼/张震</br>疯狂动物城2", "83.7 "],
+      ["7", "朱迪", "金妮弗·古德温/季冠霖</br>疯狂动物城2", "83.6 "],
+      ["8", "申公豹", "杨卫</br>哪吒之魔童闹海", "82.8 "],
+      ["9", "刘春和", "易烊千玺</br>小小的我", "81.9 "],
+      ["10", "毕正明", "王安宇</br>毕正明的证明", "81.7 "],
     ],
   },
-   {
+  {
     columns: [
       {
         title: "排名",
@@ -257,19 +257,19 @@ export const dataList = [
       }
     ],
     data: [
-      ["1","范丞丞","75.0"],
-      ["2","丁程鑫","74.8"],
-      ["3","王安宇","73.0"],
-      ["4","此沙","68.7"],
-      ["5","张婧仪","68.2"],
-      ["6","庄达菲","67.9"],
-      ["7","兰西雅","66.0"],
-      ["8","张艺凡","65.4"],
-      ["9","周政杰","63.2"],
-      ["10","王圣迪","62.9"],
+      ["1", "范丞丞", "75.0"],
+      ["2", "丁程鑫", "74.8"],
+      ["3", "王安宇", "73.0"],
+      ["4", "此沙", "68.7"],
+      ["5", "张婧仪", "68.2"],
+      ["6", "庄达菲", "67.9"],
+      ["7", "兰西雅", "66.0"],
+      ["8", "张艺凡", "65.4"],
+      ["9", "周政杰", "63.2"],
+      ["10", "王圣迪", "62.9"],
     ],
   },
-     {
+  {
     columns: [
       {
         title: "排名",
@@ -286,16 +286,16 @@ export const dataList = [
       }
     ],
     data: [
-      ["1","哪吒之魔童闹海","235670"],
-      ["2","731 ","113448"],
-      ["3","南京照相馆","96694"],
-      ["4","酱园弄·悬案","94224"],
-      ["5","射雕英雄传：侠之大者","68328"],
-      ["6","唐探1900","63814"],
-      ["7","长安的荔枝","61296"],
-      ["8","封神第二部：战火西岐","38634"],
-      ["9","捕风追影","37181"],
-      ["10","浪浪山小妖怪","36414"],
+      ["1", "哪吒之魔童闹海", "235670"],
+      ["2", "731 ", "113448"],
+      ["3", "南京照相馆", "96694"],
+      ["4", "酱园弄·悬案", "94224"],
+      ["5", "射雕英雄传：侠之大者", "68328"],
+      ["6", "唐探1900", "63814"],
+      ["7", "长安的荔枝", "61296"],
+      ["8", "封神第二部：战火西岐", "38634"],
+      ["9", "捕风追影", "37181"],
+      ["10", "浪浪山小妖怪", "36414"],
     ],
   },
   {
@@ -319,16 +319,16 @@ export const dataList = [
       }
     ],
     data: [
-      ["1","哪吒","吕艳婷、囧森瑟夫</br>哪吒之魔童闹海", "224974"],
-      ["2","毓秀","高叶</br>南京照相馆", "19661"],
-      ["3","詹周氏","章子怡</br>酱园弄·悬案", "18909"],
-      ["4","郭靖","肖战</br>射雕英雄传：侠之大者", "18685"],
-      ["5","李善德","董成鹏</br>长安的荔枝", "17746"],
-      ["6","李淇","檀健次</br>震耳欲聋", "16910"],
-      ["7","高月香","赵丽颖</br>向阳·花", "16514"],
-      ["8","臧健和","马丽</br>水饺皇后", "16458"],
-      ["9","王许梅","杨幂</br>酱园弄·悬案", "15646"],
-      ["10","黄蓉","庄达菲</br>射雕英雄传：侠之大者", "14873"],
+      ["1", "哪吒", "吕艳婷、囧森瑟夫</br>哪吒之魔童闹海", "224974"],
+      ["2", "毓秀", "高叶</br>南京照相馆", "19661"],
+      ["3", "詹周氏", "章子怡</br>酱园弄·悬案", "18909"],
+      ["4", "郭靖", "肖战</br>射雕英雄传：侠之大者", "18685"],
+      ["5", "李善德", "董成鹏</br>长安的荔枝", "17746"],
+      ["6", "李淇", "檀健次</br>震耳欲聋", "16910"],
+      ["7", "高月香", "赵丽颖</br>向阳·花", "16514"],
+      ["8", "臧健和", "马丽</br>水饺皇后", "16458"],
+      ["9", "王许梅", "杨幂</br>酱园弄·悬案", "15646"],
+      ["10", "黄蓉", "庄达菲</br>射雕英雄传：侠之大者", "14873"],
     ],
   },
 ];
@@ -386,22 +386,43 @@ export const chartOptions = [
         },
       },
     ],
-    yAxis: {
-      type: "value",
-      axisLabel: {
-        fontWeight: "bold",
-        show: false,
+     yAxis: [
+      {
+        type: "value",
+        max: (value) => value.max * 3.5,
+        axisLabel: {
+          fontWeight: "bold",
+          show: false,
+        },
+        axisLine: {
+          show: false,
+        },
+        axisTick: {
+          show: false,
+        },
+        splitLine: {
+          show: false,
+        },
       },
-      axisLine: {
-        show: false,
-      },
-      axisTick: {
-        show: false,
-      },
-      splitLine: {
-        show: false,
-      },
-    },
+      {
+        type: "value",
+        min: (value) => value.max - ((value.max - value.min) * 2),
+        max: (value) => value.max,
+        axisLabel: {
+          fontWeight: "bold",
+          show: false,
+        },
+        axisLine: {
+          show: false,
+        },
+        axisTick: {
+          show: false,
+        },
+        splitLine: {
+          show: false,
+        },
+      }
+    ],
     grid: {
       left: "10%",
       top: "20%",
@@ -430,22 +451,22 @@ export const chartOptions = [
       getBarSeries(
         "#9f8fa6",
         [642.7, 204.2, 472.6, 300.7, 549.2, 425.0, 504.5],
-        Object.assign(barSeriesOption, { name: "总票房(亿元)" })
+        Object.assign(barSeriesOption, { name: "总票房(亿元)", yAxisIndex: 0, })
       ),
       {
         name: "总票房增幅",
         type: "line",
         symbol: "emptyCircle",
-        data: [1100, 950, 1400, 1000, 1300, 900, 1000].map((item, index) => {
-          const val = [6, -68.2, 131.5, -36.4, 82.6, -22.6, 18.7][index]
+        data: [6, -68.2, 131.5, -36.4, 82.6, -22.6, 18.7].map((item, index) => {
           return {
             value: item,
             label: {
-              position: val >= 0 ? 'top' : 'bottom',
-              color: val >= 0 ? '#595959' : 'red'
+              position: item >= 0 ? 'top' : 'bottom',
+              color: item >= 0 ? '#595959' : 'red'
             }
           }
         }),
+        yAxisIndex: 1,
         symbolSize: 8,
         lineStyle: {
           color: "#b0dce8",
@@ -463,7 +484,7 @@ export const chartOptions = [
             return 'top'
           },
           formatter: function ({ dataIndex }) {
-            return ['6%', '-68.2%', '131.5%', '-36.4%', '82.6%', '-22.6%', '18.7%'][dataIndex]
+            return ['6.0%', '-68.2%', '131.5%', '-36.4%', '82.6%', '-22.6%', '18.7%'][dataIndex]
           }
         },
       },
@@ -489,10 +510,10 @@ export const chartOptions = [
         },
         data: [
           { value: 30.6, name: '40亿+影片票房\n《哪吒之魔童闹海》' },
-          { value: 69.4, name: '40亿以下影片票房' },
+          { value: 69.4, name: '全年其他影片总票房' },
         ],
         label: {
-          formatter: '{b},\n{d}%',
+          formatter: '{b}\n{d}%',
           overflow: 'break',
           position: 'inside',
           color: 'white',
@@ -577,27 +598,66 @@ export const chartOptions = [
       textStyle: {
         fontSize: 10
       },
-      data: ["动画电影票房(亿元)", "动画电影数量(部)", "动画电影票房占比"]
+      data: ["动画电影数量(部)", "动画电影票房占比", "动画电影票房(亿元)"]
     },
-    yAxis: {
-      type: "value",
-      axisLabel: {
-        fontWeight: "bold",
-        show: false,
+     yAxis: [
+      {
+        type: "value",
+        max: (value) => value.max * 4,
+        axisLabel: {
+          fontWeight: "bold",
+          show: false,
+        },
+        axisLine: {
+          show: false,
+        },
+        axisTick: {
+          show: false,
+        },
+        splitLine: {
+          show: false,
+        },
       },
-      axisLine: {
-        show: false,
+      {
+        type: "value",
+        max: (value) => value.max * 3,
+        min: (value) => value.max - ((value.max - value.min) * 3),
+        axisLabel: {
+          fontWeight: "bold",
+          show: false,
+        },
+        axisLine: {
+          show: false,
+        },
+        axisTick: {
+          show: false,
+        },
+        splitLine: {
+          show: false,
+        },
       },
-      axisTick: {
-        show: false,
-      },
-      splitLine: {
-        show: false,
-      },
-    },
+      {
+        type: "value",
+        min: (value) => value.max - ((value.max - value.min) * 12),
+        max: (value) => value.max * 2,
+        axisLabel: {
+          fontWeight: "bold",
+          show: false,
+        },
+        axisLine: {
+          show: false,
+        },
+        axisTick: {
+          show: false,
+        },
+        splitLine: {
+          show: false,
+        },
+      }
+    ],
     grid: {
       left: "10%",
-      top: "30%",
+      top: "10%",
       bottom: "10%",
     },
     xAxis: {
@@ -623,8 +683,9 @@ export const chartOptions = [
       {
         name: "动画电影数量(部)",
         type: "line",
-        data: [1100, 1080, 1090, 1085, 1070],
+        data: [61, 46, 62, 60, 56],
         symbolSize: 8,
+        yAxisIndex: 2,
         label: {
           show: true,
           fontSize: 10,
@@ -636,8 +697,9 @@ export const chartOptions = [
       {
         name: "动画电影票房占比",
         type: "line",
-        data: [600, 610, 620, 630, 750],
+        data: [8.8, 11.5, 14.7, 16.7, 50.2],
         symbolSize: 8,
+        yAxisIndex: 1,
         label: {
           show: true,
           fontSize: 10,
@@ -650,8 +712,9 @@ export const chartOptions = [
 
         name: "动画电影票房(亿元)",
         type: "line",
-        data: [100, 80, 120, 80, 290],
+        data: [41.8, 34.7, 80.5, 70.8, 253.4],
         symbolSize: 8,
+        yAxisIndex: 0,
         label: {
           show: true,
           fontSize: 10,
@@ -789,25 +852,46 @@ export const chartOptions = [
         },
       },
     ],
-    yAxis: {
-      type: "value",
-      axisLabel: {
-        fontWeight: "bold",
-        show: false,
+    yAxis: [
+      {
+        type: "value",
+        max: (value) => value.max * 3,
+        axisLabel: {
+          fontWeight: "bold",
+          show: false,
+        },
+        axisLine: {
+          show: false,
+        },
+        axisTick: {
+          show: false,
+        },
+        splitLine: {
+          show: false,
+        },
       },
-      axisLine: {
-        show: false,
-      },
-      axisTick: {
-        show: false,
-      },
-      splitLine: {
-        show: false,
-      },
-    },
+      {
+        type: "value",
+        min: (value) => value.max - ((value.max - value.min) * 2),
+        max: (value) => value.max,
+        axisLabel: {
+          fontWeight: "bold",
+          show: false,
+        },
+        axisLine: {
+          show: false,
+        },
+        axisTick: {
+          show: false,
+        },
+        splitLine: {
+          show: false,
+        },
+      }
+    ],
     grid: {
       left: "10%",
-      top: "15%",
+      top: "26%",
       right: '10%',
       bottom: "10%",
     },
@@ -833,8 +917,9 @@ export const chartOptions = [
     series: [
       getBarSeries(
         "#9f8fa6",
-        [642.7, 204.2, 472.6, 300.7, 549.2, 425.0, 504.5],
+        [17.2, 5.5, 11.7, 7.1, 13.0, 10.1, 11.9],
         Object.assign(barSeriesOption, {
+          yAxisIndex: 0,
           name: "人次(亿人)", label: {
             show: true,
             position: 'top',
@@ -849,13 +934,13 @@ export const chartOptions = [
       {
         name: "增幅",
         type: "line",
-        data: [1100, 950, 1400, 1000, 1300, 1100, 1200].map((item, index) => {
-          const val = [0.2, -68.1, 112.7, -39.0, 82.5, -22.1, 17.4][index]
+        yAxisIndex: 1,
+        data: [0.2, -68.1, 112.7, -39.0, 82.5, -22.1, 17.4].map((item) => {
           return {
             value: item,
             label: {
-              position: val >= 0 ? 'top' : 'bottom',
-              color: val >= 0 ? '#595959' : 'red'
+              position: item >= 0 ? 'top' : 'bottom',
+              color: item >= 0 ? '#595959' : 'red'
             }
           }
         }),
@@ -869,7 +954,6 @@ export const chartOptions = [
         label: {
           show: true,
           distance: 5,
-          // position: 'top',
           fontSize: 10,
           formatter: function ({ dataIndex }) {
             return ['0.2%', '-68.1%', '112.7%', '-39.0%', '82.5%', '-22.1%', '17.4%'][dataIndex]
@@ -886,6 +970,7 @@ export const chartOptions = [
       itemHeight: 8,
       left: 'center',
       top: "4%",
+      left: '10%',
       textStyle: {
         fontSize: 10
       },
@@ -916,7 +1001,7 @@ export const chartOptions = [
     },
     xAxis: {
       type: "value",
-      min: 30,
+      // min: 20,
       axisLine: {
         show: false,
       },
@@ -978,7 +1063,12 @@ export const chartOptions = [
       },
       barWidth: 18,
     }),
-    getBarSeries("#b1c0d3", [10.0, 10.0, 7.7, 10.0, 11.0, 11.0, 12.4], {
+    getBarSeries("#b1c0d3", [10.0, 10.0, {
+      value: 7.7,
+      label: {
+        fontSize: 8
+      }
+    }, 10.0, 11.0, 11.0, 12.4], {
       name: '40岁及以上',
       stack: 'total',
       barMinHeight: 40,
@@ -1004,6 +1094,7 @@ export const chartOptions = [
       itemHeight: 8,
       left: 'center',
       top: "4%",
+      left: '10%',
       textStyle: {
         fontSize: 10
       },
@@ -1011,7 +1102,7 @@ export const chartOptions = [
     },
     yAxis: {
       type: "category",
-      data: ["2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+      data: ["2019年", "2020年", "2021年", "2022年", "2023年", "2024年", "2025年"],
       axisLabel: {
         fontWeight: 'bold',
         fontSize: 10,
@@ -1034,7 +1125,7 @@ export const chartOptions = [
     },
     xAxis: {
       type: "value",
-      min: 30,
+      // min: 30,
       axisLine: {
         show: false,
       },

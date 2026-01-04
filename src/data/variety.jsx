@@ -49,11 +49,11 @@ export const dataList = [
       },
       {
         title: "剧名",
-        width: 110,
+        width: 120,
       },
       {
         title: "口碑指数",
-        width: 50,
+        width: 40,
       },
       {
         title: "播出平台",

@@ -1,5 +1,7 @@
-export const configUrl = './'
+let config = './'
 
-// export const configUrl = 'https://mat1.gtimg.com/qqcdn/whitepaper_test/2024/'
+if (process.env.NODE_ENV === 'production') {  
+    config = 'https://mat1.gtimg.com/qqcdn/whitepaper/2025/'
+}
 
-// export const configUrl = 'https://mat1.gtimg.com/qqcdn/whitepaper/2025/'
+export const configUrl = config

@@ -120,3 +120,7 @@ html, body {
 .music-header {
     @include header-bg(linear-gradient( 90deg, rgb(135,200,220) 0%, rgb(105,191,217) 40%, rgb(75,181,213) 100%))
 }
+
+.variety-header {
+    @include header-bg(linear-gradient( 90deg, rgb(167,203,169) 0%, rgb(146,196,149) 40%, rgb(125,188,128) 100%))
+}

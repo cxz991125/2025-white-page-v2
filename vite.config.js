@@ -36,13 +36,35 @@ export default defineConfig({
     target: 'chrome58',
     assetsDir: './',
     rollupOptions: {
-      output: {
-        output: 'dist/main123.js',
-      },
       input: {
         main: resolve('index.html'),
         main2: resolve('test.html')
-      }
+      },
+      // output: {
+      //   // 统一命名规则
+      //   chunkFileNames: 'assets/js/[name]-[hash].js',
+      //   entryFileNames: 'assets/js/[name]-[hash].js',
+        
+      //   // CSS 文件放入 assets/css 目录
+      //   assetFileNames: ({ name }) => {
+      //     if (/\.css$/i.test(name)) {
+      //       return 'assets/css/[name]-[hash][extname]'
+      //     }
+          
+      //     // 图片放入 assets/images
+      //     if (/\.(png|jpe?g|gif|svg|webp|ico)$/i.test(name)) {
+      //       return 'assets/images/[name]-[hash][extname]'
+      //     }
+          
+      //     // 字体放入 assets/fonts
+      //     if (/\.(woff2?|eot|ttf|otf)$/i.test(name)) {
+      //       return 'assets/fonts/[name]-[hash][extname]'
+      //     }
+          
+      //     // 其他文件放入 assets
+      //     return 'assets/[name]-[hash][extname]'
+      //   }
+      // }
     }
   },
   plugins: [
