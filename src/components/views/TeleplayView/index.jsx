@@ -33,6 +33,7 @@ const TeleplayView = () => {
       <Wrapper
         bgImg={<ImgComponent></ImgComponent>}
         headerTitle="近五年剧集拍摄备案、获发行许可证及在更数量变化"
+        headerContent={<span className="header-title whitespace-nowrap relative" style={{fontSize: '0.135rem'}}>近五年剧集拍摄备案、获发行许可证及在更数量变化</span>}
         remark="注：备案/发行数量包含电视剧+网络剧，数据来源为广电总局，2025年备案数量更新至10月，其中8-10月统计常规剧集备案数量，全年数据为估算值；发行数量更新至第三季度，全年数据为估算值。"
         bannerOptions={{ src: imgPath("title1.png"), w: 2.19, h: 0.25, align: 'center' }}
       >

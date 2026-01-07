@@ -31,7 +31,7 @@ const MovieView = () => {
         <img className="w-full banner-img" src={getImg(imgPath('banner5.png'))} style={viewInfo.getRect('movie')} alt="" />
       </div>
       <Wrapper
-        remark="注：2025年票房截至12月18日。"
+        remark="注：2025年票房截至12月31日。"
         bgImg={<ImgComponent className="w-full top-[-80px]" index="1"></ImgComponent>}
         headerTitle="2019-2025年中国电影总票房及增幅"
         bannerOptions={{ src: imgPath("title1.png"), w: 2.89, h: 0.25, align: 'center' }}
@@ -40,7 +40,7 @@ const MovieView = () => {
       </Wrapper>
 
       <Wrapper
-        remark="注：影片票房数据统计日期截至2025年12月18日。"
+        remark="注：影片票房数据统计日期截至2025年12月31日。"
         bgImg={<ImgComponent className="w-full top-[-210px] left-0" index="5"></ImgComponent>}
         headerTitle="2025年电影票房TOP10"
         bannerOptions={{ src: imgPath("title2.png"), w: 2.91, h: 0.25, align: 'center' }}
@@ -209,7 +209,7 @@ const MovieView = () => {
         <ContentList data={dataList[6]}></ContentList>
       </Wrapper>
       <Wrapper
-        remark="注：新生代演员统计出生年份为1997年之后的电影演员，根据选定时间范围内演员主要参演作品的评分、个人美誉度和票房号召力综合计算得出，其中作品评分为核心计算指标。"
+        remark="注：新生代演员统计出生年份为1997年(含)之后的电影演员，根据选定时间范围内演员主要参演作品的评分、个人美誉度和票房号召力综合计算得出，其中作品评分为核心计算指标。"
         bgImg={<ImgComponent className="w-full top-[-40px] left-0" index="3"></ImgComponent>}
         showHeader={false}
         className="movie-header"

@@ -73,7 +73,7 @@ const MusicView = () => {
         <div className="flex justify-center">
           <img
             src={getImg(imgPath("logo1.png"))}
-            className="w-80px mt-16px mr-10px"
+            className="w-100px mt-16px mr-10px"
             alt=""
           />
           <img
@@ -94,7 +94,7 @@ const MusicView = () => {
         <div className="flex justify-center">
           <img
             src={getImg(imgPath("logo1.png"))}
-            className="w-80px mt-16px mr-10px"
+            className="w-100px mt-16px mr-10px"
             alt=""
           />
           <img
